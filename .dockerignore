@@ -1,0 +1,9 @@
+node_modules
+sessions
+auth_info
+database.json
+.git
+.gitignore
+README.md
+.DS_Store
+*.log

@@ -5,9 +5,25 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "pm2": "pm2 start index.js --name paxton-md",
+    "pm2:stop": "pm2 stop paxton-md",
+    "pm2:restart": "pm2 restart paxton-md",
+    "pm2:logs": "pm2 logs paxton-md",
+    "pm2:monit": "pm2 monit",
+    "deploy:render": "echo 'Deploying to Render...'",
+    "deploy:railway": "echo 'Deploying to Railway...'",
+    "clean": "rm -rf sessions auth_info database.json",
+    "backup": "cp database.json database.json.backup",
+    "test": "echo \"No tests specified\" && exit 0"
   },
-  "keywords": ["whatsapp-bot", "baileys", "paxton"],
+  "keywords": [
+    "whatsapp-bot",
+    "baileys",
+    "multi-device",
+    "paxton",
+    "whatsapp"
+  ],
   "author": "Paxton",
   "license": "MIT",
   "dependencies": {
@@ -18,5 +34,19 @@
     "moment-timezone": "^0.5.43",
     "pino": "^8.15.0",
     "qrcode-terminal": "^0.12.0"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jarvismd98-afk/Paxton-Md.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jarvismd98-afk/Paxton-Md/issues"
+  },
+  "homepage": "https://github.com/jarvismd98-afk/Paxton-Md#readme"
 }
